@@ -1,3 +1,4 @@
-from gsee._version import __version__
+from ._version import __version__
 
-from gsee import brl_model, pv
+from . import brl_model
+from . import pv
