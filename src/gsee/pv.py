@@ -292,6 +292,7 @@ def run_model(
     coords,
     tilt,
     azim,
+    azimFlag,
     tracking,
     capacity,
     inverter_capacity=None,
@@ -359,6 +360,7 @@ def run_model(
         azimuth=math.radians(azim),
         tilt=math.radians(tilt),
         angles=angles,
+        azimFlag=azimFlag
     )
     datetimes = irrad.index
 

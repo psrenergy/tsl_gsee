@@ -207,6 +207,7 @@ def aperture_irradiance(
     albedo=0.3,
     dni_only=False,
     angles=None,
+    azimFlag = 0
 ):
     """
     Parameters
@@ -239,7 +240,7 @@ def aperture_irradiance(
     """
     # 0. Correct azimuth if we're on southern hemisphere, so that 3.14
     # points north instead of south
-    if coords[0] < 0:
+    if (coords[0] < 0) and (azimFlag != 1):
         azimuth = azimuth + np.pi
     # 1. Calculate solar angles
     if angles is None:
