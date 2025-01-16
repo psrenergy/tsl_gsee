@@ -352,7 +352,6 @@ def run_model(
     diff_horiz = data.global_horizontal * data.diffuse_fraction
 
     # NB: aperture_irradiance expects azim/tilt in radians!
-    
     irrad = trigon.aperture_irradiance(
         dir_horiz,
         diff_horiz,
