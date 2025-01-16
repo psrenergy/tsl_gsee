@@ -292,6 +292,7 @@ def run_model(
     coords,
     tilt,
     azim,
+    azimFlag,
     tracking,
     capacity,
     inverter_capacity=None,
@@ -351,6 +352,7 @@ def run_model(
     diff_horiz = data.global_horizontal * data.diffuse_fraction
 
     # NB: aperture_irradiance expects azim/tilt in radians!
+    
     irrad = trigon.aperture_irradiance(
         dir_horiz,
         diff_horiz,
@@ -359,6 +361,7 @@ def run_model(
         azimuth=math.radians(azim),
         tilt=math.radians(tilt),
         angles=angles,
+        azimFlag=azimFlag
     )
     datetimes = irrad.index
 
